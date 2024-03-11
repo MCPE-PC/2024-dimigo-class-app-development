@@ -11,3 +11,37 @@ console.log(`${grade}${ban}${no.toString().padStart(2, '0')} ${name} 입니다.`
 // - 출력 : KDMHS에 다닙니다.
 const school = 'KDMHS';
 console.log(`${school}에 다닙니다.`);
+
+// 2. 배열 문제
+// 1) todos 배열 생성하기 (id, task, done을 키로 하는 객체 배열)
+//  - id: 1, 2, 3
+//  - task: "국어", "수학", "영어"
+//  - done: true, true, false
+
+const todos = [
+	{
+		id: 1,
+		task: '국어',
+		done: true,
+	},
+	{
+		id: 2,
+		task: '수학',
+		done: true,
+	},
+	{
+		id: 3,
+		task: '영어',
+		done: false,
+	},
+];
+
+// 2) filter 함수를 이용해서 done이 true인 것만 출력하기
+const arr_done = todos.filter((i) => i.done);
+console.log(arr_done);
+
+// 3) map 함수를 이용해서 done을 모두 false로 바꾼 후 todos 출력하기
+todos.map((i) => {
+    i.done = false;
+});
+console.log(todos);
