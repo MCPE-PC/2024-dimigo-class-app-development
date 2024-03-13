@@ -45,3 +45,17 @@ todos.map((i) => {
     i.done = false;
 });
 console.log(todos);
+
+// 3. 함수 문제
+// 1) 매개변수가 없는 hello 함수를 화살표 함수로 작성하여 "Hello" 출력하기
+const hello = () => '"Hello"';
+hello();
+
+// 2) name을 입력으로 받는 hello2 함수를 화살표 함수로 작성하여 "Hello, name" 출력하기
+// - 템플릿 문자열 : `Hello, ${name}`
+const hello2 = (name) => `Hello, ${name}`;
+hello2("디미");
+
+// 3) firstname과 lastname을 입력으로 받는 hello3 함수를 화살표 함수로 작성하여 'Hello, firstname lastname' 출력하기
+const hello3 = (firstname, lastname) => `Hello, ${firstname} ${lastname}`;
+hello3("디미", "김");
