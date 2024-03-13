@@ -19,21 +19,21 @@ console.log(`${school}에 다닙니다.`);
 //  - done: true, true, false
 
 const todos = [
-	{
-		id: 1,
-		task: '국어',
-		done: true,
-	},
-	{
-		id: 2,
-		task: '수학',
-		done: true,
-	},
-	{
-		id: 3,
-		task: '영어',
-		done: false,
-	},
+    {
+        id: 1,
+        task: '국어',
+        done: true,
+    },
+    {
+        id: 2,
+        task: '수학',
+        done: true,
+    },
+    {
+        id: 3,
+        task: '영어',
+        done: false,
+    },
 ];
 
 // 2) filter 함수를 이용해서 done이 true인 것만 출력하기
@@ -59,3 +59,28 @@ hello2("디미");
 // 3) firstname과 lastname을 입력으로 받는 hello3 함수를 화살표 함수로 작성하여 'Hello, firstname lastname' 출력하기
 const hello3 = (firstname, lastname) => `Hello, ${firstname} ${lastname}`;
 hello3("디미", "김");
+
+// 4. 객체 문제
+let newjeans = [
+    { name: "하니", age: 19 },
+    { name: "해린", age: 17 },
+    { name: "민지", age: 19 },
+    { name: "다니엘", age: 18 }
+];
+
+// 1) push 함수를 사용하여 혜인, 15살 추가하기
+newjeans.push({ name: "혜인", age: 15 });
+console.log(newjeans);
+
+// 2) "민지" 출력하기
+console.log(newjeans[2].name);
+
+// 3) map 함수를 사용하여 객체에 song을 키로 "Ditto" 추가하기
+newjeans.map((i) => {
+    i.song = "Ditto";
+});
+console.log(newjeans);
+
+// 4) filter 함수를 사용하여 age가 19세 이상인 객체 추출하기
+const result = newjeans.filter((i) => i.age >= 19);
+console.log(result);
