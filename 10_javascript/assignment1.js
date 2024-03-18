@@ -84,3 +84,43 @@ console.log(newjeans);
 // 4) filter 함수를 사용하여 age가 19세 이상인 객체 추출하기
 const result = newjeans.filter((i) => i.age >= 19);
 console.log(result);
+
+// 5. 클래스 문제
+// 1) 생성자로 id(번호)와 score(점수 배열)를 받는 Student 클래스 생성하기
+// 2) score 배열의 점수를 모두 더하여 리턴하는 sum() 메소드 작성하기
+// 3) score 배열의 점수 평균을 계산하여 리턴하는 avg() 메소드 작성하기 (sum() 메소드 이용)
+// 4) '1번 학생 총점: 60, 평균: 20' 형식으로 출력하는 print() 메소드 작성하기
+class Student {
+    #id
+
+    #sum
+
+    #count
+
+    constructor(id, score) {
+        this.#id = id;
+        this.#sum = score.reduce((a, b) => a + b);
+        this.#count = score.length;
+    }
+
+    sum() {
+        return this.#sum;
+    }
+
+    avg() {
+        return this.sum() / this.#count;
+    }
+
+    print() {
+        console.log(`${this.#id}번 학생 총점: ${this.sum()}, 평균: ${this.avg()}`);
+    }
+}
+
+// Student 객체 생성하기
+let s1 = new Student(1, [10, 20, 30]);
+let s2 = new Student(2, [50, 60, 70]);
+let s3 = new Student(3, [80, 90, 100]);
+
+s1.print();
+s2.print();
+s3.print();
