@@ -60,3 +60,12 @@ const div2 = (param) => new Promise((resolve) => {
 
 // 4) 함수 호출
 add2(10).then(mul2).then(div2).then(result => console.log("최종값:", result));
+
+// 8. async/await 문제
+// - calc()라는 async 함수 만들기
+// - 위에서 만든 add2, mul2, div2에 await를 붙여 호출하기
+// - 최종값 출력하기
+const calc = async () => console.log('최종값:', await div2(await mul2(await add2(10))));
+
+// async 함수 실행하기
+calc();
