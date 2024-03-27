@@ -88,3 +88,27 @@ let s3 = new Student(3, [80, 90, 100]);
 s1.print();
 s2.print();
 s3.print();
+
+// 10. axios 문제
+// 1) axios 모듈 가져오기
+import axios from 'axios';
+
+var post_url = 'https://jsonplaceholder.typicode.com/posts/';
+var user_url = 'https://jsonplaceholder.typicode.com/users/';
+
+// 2) getUserNameByPostId()라는 이름의 async 함수 생성하기
+// - postId로 post 정보 조회
+// - post 정보에 들어있는 userId로 user 정보 조회
+// - user 정보에 들어있는 username 리턴
+const getUserNameByPostId = async (postId) => {
+	const post = await axios.get(post_url + postId);
+	const user = await axios.get(user_url + post.data.userId);
+
+	return user.data.username;
+}
+
+
+
+// async 함수는 Promise를 리턴하므로 then으로 다음 처리를 써줌
+getUserNameByPostId(1).then(username => console.log(username));   // postId가 1인 user의 userName 출력
+getUserNameByPostId(11).then(username => console.log(username));  // postId가 11인 user의 userName 출력
