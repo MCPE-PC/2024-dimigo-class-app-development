@@ -69,3 +69,22 @@ const calc = async () => console.log('최종값:', await div2(await mul2(await a
 
 // async 함수 실행하기
 calc();
+
+// 9. module 문제
+// 1) assignment1.js에서 작성된 newjeans(배열), Student(클래스)를 가져옴
+import { newjeans, Student } from './assignment1.js';
+
+// 2) newjeans 멤버 출력
+// - Hello, 멤버명
+for (const {name} of newjeans) {
+	console.log(`Hello, ${name}`);
+}
+
+// 3) Student 객체 생성 후 print() 출력
+let s1 = new Student(1, [10, 20, 30]);
+let s2 = new Student(2, [50, 60, 70]);
+let s3 = new Student(3, [80, 90, 100]);
+
+s1.print();
+s2.print();
+s3.print();

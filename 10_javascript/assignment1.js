@@ -61,11 +61,11 @@ const hello3 = (firstname, lastname) => `Hello, ${firstname} ${lastname}`;
 hello3("디미", "김");
 
 // 4. 객체 문제
-let newjeans = [
-    { name: "하니", age: 19 },
-    { name: "해린", age: 17 },
-    { name: "민지", age: 19 },
-    { name: "다니엘", age: 18 }
+const newjeans = [
+	{ name: '하니', age: 19 },
+	{ name: '해린', age: 17 },
+	{ name: '민지', age: 19 },
+	{ name: '다니엘', age: 18 },
 ];
 
 // 1) push 함수를 사용하여 혜인, 15살 추가하기
@@ -124,3 +124,6 @@ let s3 = new Student(3, [80, 90, 100]);
 s1.print();
 s2.print();
 s3.print();
+
+// 9. module 문제
+export { newjeans, Student };
