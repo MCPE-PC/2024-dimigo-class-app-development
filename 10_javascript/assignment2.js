@@ -107,8 +107,6 @@ const getUserNameByPostId = async (postId) => {
 	return user.data.username;
 }
 
-
-
 // async 함수는 Promise를 리턴하므로 then으로 다음 처리를 써줌
 getUserNameByPostId(1).then(username => console.log(username));   // postId가 1인 user의 userName 출력
 getUserNameByPostId(11).then(username => console.log(username));  // postId가 11인 user의 userName 출력
