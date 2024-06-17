@@ -1,8 +1,8 @@
 {
-	"name": "10_javascript",
+	"name": "30_nodejs",
 	"version": "1.0.0",
-	"description": "## 1. GitHub 저장소 생성  * GitHub 계정 로그인  * GitHub classroom URL 클릭  * http://github.com/dimigo3/2024-app-dev-MCPE-PC",
-	"main": "1_variable.js",
+	"description": "",
+	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -12,9 +12,14 @@
 		"url": "https://www.mcpepc.com/"
 	},
 	"license": "MIT",
-	"type": "module",
 	"dependencies": {
-		"axios": "^1.6.8"
+		"express": "^4.19.2",
+		"mongoose": "^8.4.1"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.21",
+		"@types/node": "^20.12.11",
+		"typescript": "^5.4.5"
 	},
 	"private": true
 }

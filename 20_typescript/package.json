@@ -6,10 +6,14 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "",
-	"license": "ISC",
+	"author": {
+		"name": "Jaehyeon Park (MCPE_PC)",
+		"email": "me@mcpepc.com",
+		"url": "https://www.mcpepc.com/"
+	},
+	"license": "MIT",
 	"devDependencies": {
-		"ts-node": "^10.9.2",
 		"typescript": "^5.4.3"
-	}
+	},
+	"private": true
 }
