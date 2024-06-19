@@ -1,6 +1,14 @@
 import express from 'express';
 
-let movies: { id: number; title: string; director: string }[] = [];
+interface Movie {
+	id: number;
+	title: string;
+	director: string;
+	year: number;
+	createdAt: Date;
+}
+
+let movies: Movie[] = [];
 
 const app = express();
 app.use(express.json());
@@ -20,20 +28,22 @@ app.get('/movies/:id', (request, response) => {
 });
 
 app.post('/movies', (request, response) => {
-	const { title, director } = request.body;
+	const { title, director, year } = request.body;
 	const id = movies.length + 1;
-	const newMovie = { id, title, director };
+	const createdAt = new Date();
+	const newMovie: Movie = { id, title, director, year, createdAt };
 	movies.push(newMovie);
 	response.status(201).json(newMovie);
 });
 
 app.put('/movies/:id', (request, response) => {
 	const id = parseInt(request.params.id);
-	const { title, director } = request.body;
+	const { title, director, year } = request.body;
 	const movie = movies.find((m) => m.id === id);
 	if (movie) {
 		movie.title = title;
 		movie.director = director;
+		movie.year = year;
 		response.json(movie);
 	} else {
 		response.status(404).json({ error: 'Not Found' });
