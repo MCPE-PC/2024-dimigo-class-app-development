@@ -1,8 +1,6 @@
 {
 	"name": "10_javascript",
 	"version": "1.0.0",
-	"description": "## 1. GitHub 저장소 생성  * GitHub 계정 로그인  * GitHub classroom URL 클릭  * http://github.com/dimigo3/2024-app-dev-MCPE-PC",
-	"main": "1_variable.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
