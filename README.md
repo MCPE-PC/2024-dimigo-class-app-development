@@ -21,3 +21,7 @@
 - [https://github.com/MCPE-PC/2024-dimigo-app-dev](https://github.com/MCPE-PC/2024-dimigo-app-dev)
 
 - github에서 직접 소스를 수정하지 말고, 꼭 VSC에서 github로 올리세요!
+
+## 1학기 프로젝트
+
+[![2024 1학기 응용프로그래밍개발 프로젝트보고서](image.png)](<[게시용]%202024%201학기%20응용프로그래밍개발%20프로젝트보고서(3〇〇〇_박재현).pdf>)
